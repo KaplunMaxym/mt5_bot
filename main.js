@@ -8,7 +8,6 @@ async function monitorEURUSDPrice() {
         const account = accountConnection.account;
         // Підписка на пару
         await connection.subscribeToMarketData('EURUSD');
-        // Моніторинг ціни
         setTimeout(async () => {
             const terminalState = connection.terminalState;
             console.log('EURUSD price:', terminalState.price('EURUSD'));
